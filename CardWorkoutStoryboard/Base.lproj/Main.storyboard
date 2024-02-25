@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card SelectionVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardSelectionVC" customModule="CardWorkoutStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2D" translatesAutoresizingMaskIntoConstraints="NO" id="Sch-id-99y">
+                                <rect key="frame" x="71.666666666666686" y="181" width="250" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="3u1-iG-bmP"/>
+                                    <constraint firstAttribute="width" constant="250" id="PI0-5i-wpW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRi-2c-bYm">
+                                <rect key="frame" x="66.666666666666686" y="581" width="260" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Hz-U6-PDa"/>
+                                    <constraint firstAttribute="width" constant="260" id="Hgd-jD-Ydk"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="stop.circle" catalog="system" title="Stop!" imagePadding="5">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="stopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q26-8n-ZRW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVL-Y6-G6u">
+                                <rect key="frame" x="66.666666666666671" y="651" width="115.00000000000001" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3C6-Ny-bJR"/>
+                                    <constraint firstAttribute="width" constant="115" id="UxV-yo-e07"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="arrow.clockwise.circle" catalog="system" title="Restart" imagePadding="2">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="restartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XjH-DA-pxH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvH-qI-eeT">
+                                <rect key="frame" x="211.66666666666663" y="651" width="115" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MFr-0B-ZY4"/>
+                                    <constraint firstAttribute="width" constant="115" id="WAY-fx-z7g"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="list.bullet.rectangle.portrait" catalog="system" title="Rules" imagePadding="3">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rulesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LuL-7i-4Q4"/>
+                                    <segue destination="iHY-5y-ogi" kind="presentation" id="8aw-Sh-k2M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SVL-Y6-G6u" firstAttribute="leading" secondItem="CRi-2c-bYm" secondAttribute="leading" id="0Xy-rS-0k3"/>
+                            <constraint firstItem="CRi-2c-bYm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1YF-GR-tjS"/>
+                            <constraint firstItem="CRi-2c-bYm" firstAttribute="top" secondItem="Sch-id-99y" secondAttribute="bottom" constant="50" id="58X-xO-eD4"/>
+                            <constraint firstItem="kvH-qI-eeT" firstAttribute="centerY" secondItem="SVL-Y6-G6u" secondAttribute="centerY" id="8WZ-Sn-Wtk"/>
+                            <constraint firstItem="Sch-id-99y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-70" id="Gbm-Ql-csC"/>
+                            <constraint firstItem="kvH-qI-eeT" firstAttribute="trailing" secondItem="CRi-2c-bYm" secondAttribute="trailing" id="Hct-L9-Fck"/>
+                            <constraint firstItem="SVL-Y6-G6u" firstAttribute="top" secondItem="CRi-2c-bYm" secondAttribute="bottom" constant="20" id="cW5-jl-dPb"/>
+                            <constraint firstItem="Sch-id-99y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zku-PE-LmF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="Sch-id-99y" id="8R8-WV-B0M"/>
+                        <outlet property="restartButton" destination="SVL-Y6-G6u" id="f1m-O2-2yy"/>
+                        <outlet property="ruleButton" destination="kvH-qI-eeT" id="sxe-lA-3iw"/>
+                        <outlet property="stopButton" destination="CRi-2c-bYm" id="zyZ-qe-0Wi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zpj-kH-ZCu">
+            <objects>
+                <viewController id="iHY-5y-ogi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qjj-wJ-imc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbs-Tv-auR">
+                                <rect key="frame" x="30" y="137" width="333" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The value each card represent the number of excercise  J=11, Q=12, K=13, A=14" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9D-Sp-Gw9">
+                                <rect key="frame" x="20" y="268" width="353" height="86"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="♠️ = Push-Up  ♥️ = Sit-Up  ♦️ = Burpees  ♣️ = Jumps" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQd-rd-0jT">
+                                <rect key="frame" x="107" y="472.00000000000006" width="179" height="175.66666666666669"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vez-tu-JWj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xbs-Tv-auR" firstAttribute="leading" secondItem="vez-tu-JWj" secondAttribute="leading" constant="30" id="7Jz-Nj-zBm"/>
+                            <constraint firstItem="d9D-Sp-Gw9" firstAttribute="top" secondItem="Xbs-Tv-auR" secondAttribute="bottom" constant="83" id="7m3-SP-160"/>
+                            <constraint firstItem="CQd-rd-0jT" firstAttribute="top" secondItem="d9D-Sp-Gw9" secondAttribute="bottom" constant="118" id="VpM-JJ-eC3"/>
+                            <constraint firstItem="vez-tu-JWj" firstAttribute="trailing" secondItem="d9D-Sp-Gw9" secondAttribute="trailing" constant="20" id="X1J-rb-xkg"/>
+                            <constraint firstItem="vez-tu-JWj" firstAttribute="trailing" secondItem="CQd-rd-0jT" secondAttribute="trailing" constant="107" id="Xn5-Mg-dOw"/>
+                            <constraint firstItem="d9D-Sp-Gw9" firstAttribute="leading" secondItem="vez-tu-JWj" secondAttribute="leading" constant="20" id="Y4c-Mz-WSU"/>
+                            <constraint firstItem="CQd-rd-0jT" firstAttribute="leading" secondItem="vez-tu-JWj" secondAttribute="leading" constant="107" id="a2J-ZV-ugE"/>
+                            <constraint firstItem="Xbs-Tv-auR" firstAttribute="top" secondItem="vez-tu-JWj" secondAttribute="top" constant="137" id="oo3-QC-QoL"/>
+                            <constraint firstItem="vez-tu-JWj" firstAttribute="trailing" secondItem="Xbs-Tv-auR" secondAttribute="trailing" constant="30" id="ueY-zn-MeD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIt-gx-XLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="-19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2D" width="691" height="1056"/>
+        <image name="arrow.clockwise.circle" catalog="system" width="128" height="123"/>
+        <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
+        <image name="stop.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
